@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{853E18A9-23F1-46C1-9EBA-0060A033FCBC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="console.project.02.05.22/models/Employee.cs">
+    <Files>
+      <File FileName="console.project.02.05.22/Program.cs" Line="9" Column="13" />
+      <File FileName="console.project.02.05.22/models/department.cs" />
+      <File FileName="console.project.02.05.22/models/Employee.cs" Line="94" Column="21" />
+      <File FileName="console.project.02.05.22/Interfaces/IHumanResourceManager.cs" />
+      <File FileName="console.project.02.05.22/Service/services.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="console.project.02.05.22" expanded="True">
+            <Node name="console.project.02.05.22" expanded="True">
+              <Node name="Interfaces" expanded="True" />
+              <Node name="models" expanded="True">
+                <Node name="Employee.cs" selected="True" />
+              </Node>
+              <Node name="Service" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.console.project.02.05.22 FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
