@@ -1,0 +1,13 @@
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/bin/Debug/netcoreapp3.1/console.project.02.05.22.deps.json
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/bin/Debug/netcoreapp3.1/console.project.02.05.22.runtimeconfig.json
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/bin/Debug/netcoreapp3.1/console.project.02.05.22.runtimeconfig.dev.json
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/bin/Debug/netcoreapp3.1/console.project.02.05.22.dll
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/bin/Debug/netcoreapp3.1/console.project.02.05.22.pdb
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/obj/Debug/netcoreapp3.1/console.project.02.05.22.csproj.AssemblyReference.cache
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/obj/Debug/netcoreapp3.1/console.project.02.05.22.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/obj/Debug/netcoreapp3.1/console.project.02.05.22.AssemblyInfoInputs.cache
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/obj/Debug/netcoreapp3.1/console.project.02.05.22.AssemblyInfo.cs
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/obj/Debug/netcoreapp3.1/console.project.02.05.22.csproj.CoreCompileInputs.cache
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/obj/Debug/netcoreapp3.1/console.project.02.05.22.dll
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/obj/Debug/netcoreapp3.1/console.project.02.05.22.pdb
+/Users/rehmanvahabov/Projects/console.project.02.05.22/console.project.02.05.22/obj/Debug/netcoreapp3.1/console.project.02.05.22.genruntimeconfig.cache

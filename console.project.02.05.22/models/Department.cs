@@ -1,48 +1,41 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace console.project._02._05._22.models
 {
-    public class department
+    class Department
     {
-            public string _name;
+        private string _name;
 
-            private int _workerlimit;
+        private int _workerLimit;
 
-            private double _salarylimit;
+        private double _salaryLimit;
 
-            public Employee[] Employees;
-
+        public Employee[] Employees;
         public double SalaryLimit
         {
-            get => _salarylimit;
+            get => _salaryLimit;
             set
             {
-                while (value < 250)
+                while (value < (_workerLimit * 250))
                 {
-                    Console.WriteLine("minmum maas 250 olmalidir");
-                    if (int.TryParse(Console.ReadLine(), out int salaryLimit))
-                    {
-                        value = salaryLimit;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Herf daxil etmek olmaz");
-                    }
+                    Console.WriteLine("Mass limitini duzgun qeyd et");
+                    double.TryParse(Console.ReadLine(), out value);
                 }
-                _salarylimit = value;
+                _salaryLimit = value;
             }
         }
-
-        public int Workerlimit
+        public int WorkerLimit
         {
-            get => _workerlimit; 
-
+            get => _workerLimit;
             set
             {
-                while (value < 10)
+                while (value < 2)
                 {
-                    Console.WriteLine("Minimum isci sayi 10");
+                    Console.WriteLine("Minimum isci sayi 10 ola biler");
                     int workerLimit;
-                    if(int.TryParse(Console.ReadLine(), out workerLimit))
+                    if (int.TryParse(Console.ReadLine(), out workerLimit))
                     {
                         value = workerLimit;
                     }
@@ -51,45 +44,67 @@ namespace console.project._02._05._22.models
                         Console.WriteLine("Herf daxil etmek olmaz");
                     }
                 }
-                _workerlimit = value;
+                _workerLimit = value;
             }
         }
-
         public string Name
         {
             get => _name;
             set
             {
-                while (value.Length < 2)
+                while (NameChecker(value))
                 {
-                    Console.WriteLine("ad minimum 2 herfden ibaret olamlidir");
+                    Console.WriteLine("Ad minimum 2 herfden ibaret ola biler");
                     value = Console.ReadLine();
+                }
+                if (NameChecker(value))
+                {
+                    value = Name;
                 }
                 _name = value;
             }
         }
-
-      
-        public department(string name, int workerLimit, double salaryLimit)
+        public bool NameChecker(string name)
         {
-            Employee[] employe = new Employee[0];
-                 Workerlimit = workerLimit;
-                SalaryLimit = salaryLimit;
-                Name = name;
-
+            if (name.Length >= 2)
+            {
+                foreach (var item in name)
+                {
+                    if (!char.IsLetter(item))
+                    {
+                        return false;
+                    }
+                }
+                return false;
+            }
+            return false;
         }
-
+        public Department(string name, int workerLimit, double salaryLimit)
+        {
+            Employees = new Employee[0];
+            WorkerLimit = workerLimit;
+            SalaryLimit = salaryLimit;
+            Name = name;
+        }
         public double CalcSalaryAvarage()
         {
-            double total = 0;
-            foreach(Employee employe in Employees)
+            double sum = 0;
+            int count = 0;
+            foreach (Employee employee in Employees)
             {
-                total += employe.Salary;
+                if (employee != null)
+                {
+                    sum += employee.Salary;
+                    count++;
+                }
             }
-            total = total / Employees.Length;
-            return total;
+            return sum > 0 ? sum / count : 0;
+        }
+
+        public override string ToString()
+        {
+            return $"Departmentin adi: {Name} \nDepartmentin isci limiti: {WorkerLimit} \nDeparmentin isci maas limiti: {SalaryLimit}";
         }
     }
 
- 
 }

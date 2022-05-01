@@ -1,50 +1,47 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace console.project._02._05._22.models
 {
-    public class Employee
+    class Employee
     {
-        public Employee()
+        private static int _count;
+
+        private readonly string _no;
+
+        private int _id;
+        public string FullName { get; set; }
+        public string DepartmentName { get; set; }
+
+        private string _position;
+
+        private double _salary;
+
+        public string No { get; set; }
+
+        public bool CheckPosition(string position)
         {
+            bool checkLetter = false;
 
-        }
-            private static int _count;
-
-            private readonly string _no;
-
-            private int _id;
-
-            public string FullName { get; set; }
-
-            public string DepartmentName { get; set; }
-
-            private string _position;
-
-            private double _salary;
-
-            public string No { get; set; }
-
-            public bool ChekPosition(string position)
-        {
-            bool chekLetter = false;
-
-            if (position.Length > -2)
+            if (position.Length >= 2)
             {
-                foreach(char item in position)
+                foreach (char item in position)
                 {
                     if (!char.IsLetter(item))
                     {
-                        chekLetter = false;
-                        return chekLetter;
+                        checkLetter = false;
+                        return checkLetter;
                     }
-
                     else
                     {
-                        chekLetter = true;
+                        checkLetter = true;
                     }
                 }
             }
-            return chekLetter;
+            return checkLetter;
         }
+
         public double Salary
         {
             get => _salary;
@@ -52,15 +49,15 @@ namespace console.project._02._05._22.models
             {
                 while (value < 250)
                 {
-                    Console.WriteLine("minimum maas 250 dir");
+                    Console.WriteLine("Minimum maas 250 ola biler");
                     int salary;
-                    if (int.TryParse(Console.ReadLine(),out salary))
+                    if (int.TryParse(Console.ReadLine(), out salary))
                     {
                         value = salary;
                     }
                     else
                     {
-                        Console.WriteLine("duzgun daxil et yalniz reqem olmalidir");
+                        Console.WriteLine("Herf daxil etmek olmaz");
                     }
                 }
                 _salary = value;
@@ -71,9 +68,9 @@ namespace console.project._02._05._22.models
             get => _position;
             set
             {
-                while (!ChekPosition(value))
+                while (!CheckPosition(value))
                 {
-                    Console.WriteLine("duzgun daxil et");
+                    Console.WriteLine("Duzgun daxil et");
                     value = Console.ReadLine();
                 }
                 _position = value;
@@ -83,23 +80,23 @@ namespace console.project._02._05._22.models
         {
             _count = 1000;
         }
-        public Employee(string fullName , string position , int salary , string no , string departmentName)
+
+        public Employee(string fullName, string position, double salary, string departmentName)
         {
             FullName = fullName;
             Position = position;
             Salary = salary;
             DepartmentName = departmentName;
             _count++;
-            No = $"{Position.Substring(0, 2)}{_count}";
-            No = no;
+            No = $"{departmentName.Substring(0, 2).ToUpper()}{_count}";
+            Console.WriteLine(No);
         }
-      
-
-
-
-
-
-
-
+        public override string ToString()
+        {
+            string[] NameSurname = FullName.Split(" ");
+            NameSurname[0].ToUpper();
+            NameSurname[1].ToUpper();
+            return $"Iscinin adi: {NameSurname[0]} Iscinin soyadi:{NameSurname[1]} Iscinin vezifesi: {_position} iscinin maasi: {_salary} {No}";
+        }
     }
 }
